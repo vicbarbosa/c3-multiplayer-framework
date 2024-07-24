@@ -37,7 +37,28 @@
 		}
 	],
 	"sid": 348496048904859,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "Cryptography",
+			"properties": {},
+			"uid": 3,
+			"instanceVariables": {}
+		},
+		{
+			"type": "BinaryData",
+			"properties": {
+				"endian": "big"
+			},
+			"uid": 4,
+			"instanceVariables": {}
+		},
+		{
+			"type": "JSON",
+			"properties": {},
+			"uid": 5,
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [],
 	"width": 1920,
 	"height": 1080,

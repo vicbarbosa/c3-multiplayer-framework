@@ -5,10 +5,93 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "BinaryData",
+			"name": "Binary Data",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Cryptography",
+			"name": "Cryptography",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Multiplayer",
+			"name": "Multiplayer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PushStart_CustomEvents",
+			"name": "Custom Events",
+			"author": "PushStart",
+			"bundled": false,
+			"version": "1.0.1.8"
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "9mg4oh9k9p4",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Multiplayer",
+			"Cryptography",
+			"BinaryData",
+			"JSON",
+			"Gamepad",
+			"Keyboard",
+			"Mouse",
+			"Touch",
+			"CustomEvents",
+			"Browser"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
@@ -25,7 +108,8 @@
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"eInputHandler"
 		],
 		"subfolders": []
 	},
@@ -113,7 +197,30 @@
 		},
 		"general": {
 			"items": [],
-			"subfolders": []
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "ReadableToContextAction.json",
+							"type": "application/json",
+							"sid": 803950112938110,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "CodeToReadable.json",
+							"type": "application/json",
+							"sid": 322689976509646,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "InputMaps"
+				}
+			]
 		}
 	},
 	"timelines": {

@@ -1,0 +1,40 @@
+{
+	"default": {
+		"keyboard": {
+			"W": "UP",
+			"A": "LEFT",
+			"S": "DOWN",
+			"D": "RIGHT",
+			"↑": "UP",
+			"←": "LEFT",
+			"↓": "DOWN",
+			"→": "RIGHT",
+			"Z": "ATTACK",
+			"F": "ATTACK",
+			"X" : "USE",
+			"E" : "USE"
+		},
+		"gamepad": {
+			"DPAD_UP" : "UP",
+			"DPAD_LEFT" : "LEFT",
+			"DPAD_DOWN" : "DOWN",
+			"DPAD_RIGHT" : "RIGHT"
+		},
+		"mouse": {
+			"Mouse 1": "ATTACK",
+			"Mouse 2": "USE"
+		},
+		"touch": {
+			"Touch" : "ATTACK"
+		},
+		"rpc" :
+		{
+			"0" : "UP",
+			"1" : "LEFT",
+			"2" : "DOWN",
+			"3" : "RIGHT",
+			"4" : "ATTACK",
+			"5" : "USE"
+		}
+	}
+}

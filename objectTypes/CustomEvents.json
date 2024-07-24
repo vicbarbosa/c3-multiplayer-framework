@@ -1,0 +1,10 @@
+{
+	"name": "CustomEvents",
+	"plugin-id": "PushStart_CustomEvents",
+	"sid": 262896978325585,
+	"singleglobal-inst": {
+		"type": "CustomEvents",
+		"properties": {},
+		"uid": 10
+	}
+}
