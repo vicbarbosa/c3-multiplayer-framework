@@ -1,0 +1,14 @@
+{
+	"setPlayerReady" :
+	{
+		"parameters": ["player", "ready"]
+	},
+	"matchStartCountdown" :
+	{
+		"parameters": []
+	},
+	"damagePlayer" :
+	{
+		"parameters" : ["victim","agressor","amount", "newHp"]
+	}
+}

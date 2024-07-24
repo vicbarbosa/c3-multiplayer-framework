@@ -72,6 +72,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
@@ -98,7 +105,9 @@
 			"Touch",
 			"CustomEvents",
 			"Browser",
-			"AJAX"
+			"AJAX",
+			"JSON",
+			"Text"
 		],
 		"subfolders": []
 	},
@@ -204,7 +213,16 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "file.txt",
+					"type": "text/plain",
+					"sid": 540161072063349,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": [
 				{
 					"items": [
@@ -223,11 +241,17 @@
 							"file-info": {
 								"purpose": "none"
 							}
-						},
+						}
+					],
+					"subfolders": [],
+					"name": "Inputs"
+				},
+				{
+					"items": [
 						{
-							"name": "Action.json",
+							"name": "GameState.json",
 							"type": "application/json",
-							"sid": 653644887405457,
+							"sid": 264481625838963,
 							"file-info": {
 								"purpose": "none"
 							}
@@ -241,16 +265,38 @@
 							}
 						},
 						{
-							"name": "GameState.json",
+							"name": "ActionInstance.json",
 							"type": "application/json",
-							"sid": 264481625838963,
+							"sid": 653644887405457,
 							"file-info": {
 								"purpose": "none"
 							}
 						}
 					],
 					"subfolders": [],
-					"name": "InputMaps"
+					"name": "GameState"
+				},
+				{
+					"items": [
+						{
+							"name": "HostEvents.json",
+							"type": "application/json",
+							"sid": 753647278236757,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NetworkIds.json",
+							"type": "application/json",
+							"sid": 577009554628191,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Network"
 				}
 			]
 		}

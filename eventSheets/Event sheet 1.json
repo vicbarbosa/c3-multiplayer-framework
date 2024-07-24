@@ -17,10 +17,64 @@
 			"actions": [
 				{
 					"callFunction": "InitializeInputs",
-					"sid": 162123530687433
+					"sid": 162123530687433,
+					"disabled": true
+				},
+				{
+					"id": "parse",
+					"objectClass": "JSON",
+					"sid": 967880499941634,
+					"parameters": {
+						"data": "\"{}\""
+					}
 				}
 			],
-			"sid": 629787808123126
+			"sid": 629787808123126,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 831284657828550,
+							"parameters": {
+								"name": "\"\"",
+								"start-index": "0",
+								"end-index": "1024"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-value",
+							"objectClass": "JSON",
+							"sid": 466762096697781,
+							"parameters": {
+								"path": "str(loopindex)",
+								"value": "Keyboard.StringFromKeyCode(loopindex)"
+							}
+						}
+					],
+					"sid": 708870342256870
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 356219181201806,
+							"parameters": {
+								"type": "log",
+								"message": "JSON.ToCompactString"
+							}
+						}
+					],
+					"sid": 324365541450638
+				}
+			]
 		}
 	],
 	"sid": 573356835118372
