@@ -1,5 +1,230 @@
 {
 	"name": "eInputHandler",
-	"events": [],
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "INPUTHANDLER.INITIALIZATION",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "InitializeInputs",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "parse",
+							"objectClass": "jInput",
+							"sid": 286791272336812,
+							"parameters": {
+								"data": "\"{}\""
+							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 423071706274674,
+							"parameters": {
+								"tag": "\"codeToReadable\"",
+								"file": "CodeToReadable.json"
+							}
+						}
+					],
+					"sid": 144657848806870
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 642048438020845,
+							"parameters": {
+								"tag": "\"codeToReadable\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-json",
+							"objectClass": "jInput",
+							"sid": 746435451371930,
+							"parameters": {
+								"path": "\"codeToReadable\"",
+								"json": "AJAX.LastData"
+							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 804236371296695,
+							"parameters": {
+								"tag": "\"readableToContextAction\"",
+								"file": "ReadableToContextAction.json"
+							}
+						}
+					],
+					"sid": 296330379394484
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 870879754394088,
+							"parameters": {
+								"tag": "\"readableToContextAction\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-json",
+							"objectClass": "jInput",
+							"sid": 164839464809079,
+							"parameters": {
+								"path": "\"maps\"",
+								"json": "AJAX.LastData"
+							}
+						}
+					],
+					"sid": 180380176000439,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "jInput",
+									"sid": 749434043602419,
+									"parameters": {
+										"path": "\"maps\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 893640563243701,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "map",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 740070078484168
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 338967883613918,
+											"parameters": {
+												"variable": "map",
+												"value": "jInput.CurrentKey"
+											}
+										},
+										{
+											"id": "set-object",
+											"objectClass": "jInput",
+											"sid": 446192184340914,
+											"parameters": {
+												"path": "\"maps.\" & map & \".actionsToRpc\""
+											}
+										}
+									],
+									"sid": 231452914872880,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "jInput",
+													"sid": 641756366731879,
+													"parameters": {
+														"path": "\"maps.\" & map & \".rpc\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-value",
+													"objectClass": "jInput",
+													"sid": 655332325769073,
+													"parameters": {
+														"path": "\"maps.\" & map & \".actionsToRpc.\" & str(jInput.CurrentValue)",
+														"value": "jInput.CurrentKey"
+													}
+												}
+											],
+											"sid": 384641154482144
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 285198975791087,
+									"parameters": {
+										"type": "log",
+										"message": "jInput.ToBeautifiedString"
+									}
+								}
+							],
+							"sid": 566394424015944
+						}
+					]
+				}
+			],
+			"sid": 350455663232240
+		},
+		{
+			"functionName": "GetReadable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "string",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "device",
+					"type": "string",
+					"initialValue": "",
+					"comment": "keyboard | mouse | gamepad | touch",
+					"sid": 265184685241959
+				},
+				{
+					"name": "code",
+					"type": "string",
+					"initialValue": "",
+					"comment": "numeric code to convert",
+					"sid": 754067196573617
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 716297588446326
+		}
+	],
 	"sid": 799902269493803
 }

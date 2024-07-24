@@ -53,7 +53,7 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "JSON",
+			"type": "jInput",
 			"properties": {},
 			"uid": 5,
 			"instanceVariables": {}

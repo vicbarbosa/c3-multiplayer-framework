@@ -2,6 +2,10 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "eInputHandler"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -10,108 +14,13 @@
 					"sid": 312525755534435
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"callFunction": "InitializeInputs",
+					"sid": 162123530687433
+				}
+			],
 			"sid": 629787808123126
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-any-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 465940013573037
-				}
-			],
-			"actions": [
-				{
-					"id": "log",
-					"objectClass": "Browser",
-					"sid": 381732310102038,
-					"parameters": {
-						"type": "log",
-						"message": "\"Last key code\" & Keyboard.LastKeyCode & newline & \"String \" & Keyboard.StringFromKeyCode(Keyboard.LastKeyCode)"
-					}
-				},
-				{
-					"id": "parse",
-					"objectClass": "JSON",
-					"sid": 891520655447776,
-					"parameters": {
-						"data": "\"{}\""
-					}
-				}
-			],
-			"sid": 870091195523992,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "for",
-							"objectClass": "System",
-							"sid": 646918805135865,
-							"parameters": {
-								"name": "\"\"",
-								"start-index": "0",
-								"end-index": "500"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-value",
-							"objectClass": "JSON",
-							"sid": 647530492012997,
-							"parameters": {
-								"path": "str(loopindex)",
-								"value": "Keyboard.StringFromKeyCode(loopindex)"
-							}
-						}
-					],
-					"sid": 142894621077615
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 851906890426969,
-							"parameters": {
-								"type": "log",
-								"message": "JSON.ToCompactString"
-							}
-						}
-					],
-					"sid": 594959191821309
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-any-button-pressed",
-					"objectClass": "Gamepad",
-					"sid": 381083092602189,
-					"parameters": {
-						"gamepad": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "log",
-					"objectClass": "Browser",
-					"sid": 820054459636222,
-					"parameters": {
-						"type": "log",
-						"message": "Gamepad.ButtonIndex"
-					}
-				}
-			],
-			"sid": 646335758782005
 		}
 	],
 	"sid": 573356835118372

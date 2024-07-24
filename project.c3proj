@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "BinaryData",
 			"name": "Binary Data",
 			"author": "Scirra",
@@ -84,13 +91,14 @@
 			"Multiplayer",
 			"Cryptography",
 			"BinaryData",
-			"JSON",
+			"jInput",
 			"Gamepad",
 			"Keyboard",
 			"Mouse",
 			"Touch",
 			"CustomEvents",
-			"Browser"
+			"Browser",
+			"AJAX"
 		],
 		"subfolders": []
 	},
@@ -212,6 +220,22 @@
 							"name": "CodeToReadable.json",
 							"type": "application/json",
 							"sid": 322689976509646,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Action.json",
+							"type": "application/json",
+							"sid": 653644887405457,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Player.json",
+							"type": "application/json",
+							"sid": 667735682011278,
 							"file-info": {
 								"purpose": "none"
 							}
