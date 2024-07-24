@@ -239,6 +239,14 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "GameState.json",
+							"type": "application/json",
+							"sid": 264481625838963,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],

@@ -1,12 +1,20 @@
 {
-	"slot" : 0,
-	"mode" : "local|remote",
-	"actions" :
-	[
-		
+	"inputDevices": [
+		{
+			"type": "keyboard",
+			"index": 0
+		},
+		{
+			"type": "mouse",
+			"index" : 0
+		} 
 	],
-	"state" :
-	{
-	
+	"actions": [],
+	"state": {
+		"displayName": "",
+		"connected" : "",
+		"networkId": "",
+		"slot": 0,
+		"mode": "local|remote"
 	}
 }
